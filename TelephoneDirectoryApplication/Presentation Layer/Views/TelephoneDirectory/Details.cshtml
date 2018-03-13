@@ -1,0 +1,57 @@
+﻿@model Presentation_Layer.ViewModel.TelephoneDirectoryRecordViewModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<link href="~/Content/buttonstyle.css" rel="stylesheet" type="text/css" />
+
+<div>
+    <h4>Record</h4>
+    <hr />
+    <dl class="dl-horizontal ">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { phoneNumber = Model.PhoneNumber }, new { @class = "buttonstyle" }) |
+    @Html.ActionLink("Back to List", "Index",null, new { @class = "buttonstyle" })
+</p>

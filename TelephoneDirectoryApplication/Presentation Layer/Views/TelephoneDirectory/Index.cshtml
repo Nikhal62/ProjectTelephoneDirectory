@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Presentation_Layer.ViewModel.TelephoneDirectoryRecordViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<link href="~/Content/buttonstyle.css" rel="stylesheet" type="text/css"/>
+<p>
+    @Html.ActionLink("Create New", "Create",null, new { @class = "buttonstyle" })
+</p>
+<br/>
+<p>
+    @using (Html.BeginForm("Index", "TelephoneDirectory", FormMethod.Get))
+    {
+        <b>Enter the phone number to search</b>
+        @Html.TextBox("search") <input type="submit" name="submit" value="Search" class="btn btn-warning" />
+    }
+</p>
+
+<br />
+
+<table class="table table-bordered table-hover table-responsive">
+   
+     <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { phoneNumber = item.PhoneNumber }, new { @class="buttonstyle" }) |
+                    @Html.ActionLink("Details", "Details", new { phoneNumber = item.PhoneNumber }, new { @class = "buttonstyle" }) |
+                    @Html.ActionLink("Delete", "Delete", new { phoneNumber = item.PhoneNumber }, new { @class = "buttonstyle" })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

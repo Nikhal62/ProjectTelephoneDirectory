@@ -1,0 +1,84 @@
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Business Logic Layer.dll.config
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Business Logic Layer.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Business Logic Layer.pdb
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Autofac.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Autofac.Integration.Mvc.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Common.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Data Access Layer.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\EntityFramework.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Microsoft.Web.Infrastructure.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Mono.Security.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Npgsql.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Npgsql.EntityFramework.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.Helpers.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.Mvc.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.Razor.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.WebPages.Deployment.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.WebPages.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.WebPages.Razor.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Common.pdb
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Data Access Layer.pdb
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Autofac.xml
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Autofac.Integration.Mvc.xml
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\EntityFramework.xml
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Npgsql.xml
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Npgsql.EntityFramework.xml
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.Helpers.xml
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.Mvc.xml
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.Razor.xml
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.WebPages.xml
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.WebPages.Deployment.xml
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.WebPages.Razor.xml
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\de\Npgsql.resources.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\es\Npgsql.resources.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\fi\Npgsql.resources.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\fr\Npgsql.resources.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\ja\Npgsql.resources.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\zh-CN\Npgsql.resources.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\obj\Debug\Business Logic Layer.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\obj\Debug\Business Logic Layer.dll
+c:\users\admin\documents\visual studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\obj\Debug\Business Logic Layer.pdb
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Business Logic Layer.dll.config
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Business Logic Layer.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Business Logic Layer.pdb
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Autofac.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Autofac.Integration.Mvc.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Common.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Data Access Layer.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\EntityFramework.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Mono.Security.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Npgsql.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Npgsql.EntityFramework.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.Helpers.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.Mvc.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.Razor.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.WebPages.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Common.pdb
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Data Access Layer.pdb
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Autofac.xml
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Autofac.Integration.Mvc.xml
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\EntityFramework.xml
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Npgsql.xml
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\Npgsql.EntityFramework.xml
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.Helpers.xml
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.Mvc.xml
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.Razor.xml
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.WebPages.xml
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\de\Npgsql.resources.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\es\Npgsql.resources.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\obj\Debug\Business Logic Layer.csprojResolveAssemblyReference.cache
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\obj\Debug\Business Logic Layer.dll
+C:\Users\Exp\Documents\Visual Studio 2015\Projects\TelephoneDirectoryApplication\Business Logic Layer\obj\Debug\Business Logic Layer.pdb
