@@ -15,9 +15,9 @@ namespace Business_Logic_Layer.Service
             objTelephone = tmpService;
         }
 
-        public IEnumerable<TelephoneDirectoryRecordDTO> ViewSearchedRecords(string search)
+        public IEnumerable<TelephoneDirectoryRecordDTO> ViewSearchedRecords(string firstNameSearch, string lastNameSearch, string addressSearch, string phoneTypeSearch, string phoneNumberSearch)
         {
-            IEnumerable<TelephoneDirectoryRecord> telephonerecordlist = objTelephone.ViewSearchedRecords(search);
+            IEnumerable<TelephoneDirectoryRecord> telephonerecordlist = objTelephone.ViewSearchedRecords(firstNameSearch,lastNameSearch,addressSearch,phoneTypeSearch,phoneNumberSearch);
             List<TelephoneDirectoryRecordDTO> recordlist = new List<TelephoneDirectoryRecordDTO>();
             foreach (var obj in telephonerecordlist)
             {

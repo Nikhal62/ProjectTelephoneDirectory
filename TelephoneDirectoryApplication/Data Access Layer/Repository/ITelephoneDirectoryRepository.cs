@@ -5,7 +5,7 @@ namespace Data_Access_Layer.Repository
 {
     public interface ITelephoneDirectoryRepository
     {
-        IEnumerable<TelephoneDirectoryRecord> ViewSearchedRecords(string search);
+        IEnumerable<TelephoneDirectoryRecord> ViewSearchedRecords(string firstNameSearch, string lastNameSearch, string addressSearch, string phoneTypeSearch, string phoneNumberSearch);
 
         //method to check whether the phone number is duplicate entry
         bool CheckDuplicate(string phoneNumber,string phoneType);

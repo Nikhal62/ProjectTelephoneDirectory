@@ -5,7 +5,7 @@ namespace Business_Logic_Layer.Service
 {
     public interface ITelephoneDirectoryService
     {
-        IEnumerable<TelephoneDirectoryRecordDTO> ViewSearchedRecords(string search);
+        IEnumerable<TelephoneDirectoryRecordDTO> ViewSearchedRecords(string firstNameSearch, string lastNameSearch, string addressSearch, string phoneTypeSearch, string phoneNumberSearch);
 
         //method to check whether the phone number is duplicate entry
         bool CheckDuplicate(string phoneNumber,string phoneType);

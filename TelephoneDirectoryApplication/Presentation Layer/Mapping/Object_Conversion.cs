@@ -6,23 +6,23 @@ namespace Presentation_Layer.Mapping
     public class Object_Conversion
     {
         //method which maps viewmodel object to dto object
-        public TelephoneDirectoryRecordDTO ViewModelToDtoMapping(TelephoneDirectoryRecordViewModel objTelephoneViewModel)
+        public TelephoneDirectoryRecordDTO ModelToDtoMapping(TelephoneDirectoryRecordModel objTelephoneModel)
         {
             TelephoneDirectoryRecordDTO objTelephoneDto = new TelephoneDirectoryRecordDTO
             {
-                FirstName = objTelephoneViewModel.FirstName,
-                LastName = objTelephoneViewModel.LastName,
-                Address = objTelephoneViewModel.Address,
-                PhoneType = objTelephoneViewModel.PhoneType,
-                PhoneNumber = objTelephoneViewModel.PhoneNumber
+                FirstName = objTelephoneModel.FirstName,
+                LastName = objTelephoneModel.LastName,
+                Address = objTelephoneModel.Address,
+                PhoneType = objTelephoneModel.PhoneType,
+                PhoneNumber = objTelephoneModel.PhoneNumber
             };
             return objTelephoneDto;
         }
 
         //method which maps dto object to viewmodel object
-        public TelephoneDirectoryRecordViewModel DtoToViewModelMapping(TelephoneDirectoryRecordDTO objTelephoneDto)
+        public TelephoneDirectoryRecordModel DtoToModelMapping(TelephoneDirectoryRecordDTO objTelephoneDto)
         {
-            TelephoneDirectoryRecordViewModel objTelephoneViewModel = new TelephoneDirectoryRecordViewModel
+            TelephoneDirectoryRecordModel objTelephoneModel = new TelephoneDirectoryRecordModel
             {
                 FirstName = objTelephoneDto.FirstName,
                 LastName = objTelephoneDto.LastName,
@@ -30,7 +30,7 @@ namespace Presentation_Layer.Mapping
                 PhoneType = objTelephoneDto.PhoneType,
                 PhoneNumber = objTelephoneDto.PhoneNumber
             };
-            return objTelephoneViewModel;
+            return objTelephoneModel;
         }
     }
 }

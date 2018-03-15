@@ -2,9 +2,10 @@
 using Common.CommonDTO;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using Presentation_Layer.ViewModel;
 using System.Net;
 using Presentation_Layer.Mapping;
+using Presentation_Layer.ViewModel;
+using Presentation_Layer.Paging;
 
 namespace Presentation_Layer.Controllers
 {
@@ -13,8 +14,18 @@ namespace Presentation_Layer.Controllers
         //for using the phone number value in two action methods
         static string phoneNumberOld;
 
+        //for getting the searched values in index post request
+        static string _firstNameSearch;
+        static string _lastNameSearch;
+        static string _addressSearch;
+        static string _phoneTypeSearch;
+        static string _phoneNumberSearch;
+
         //for conversion of objects from one type to another
         Object_Conversion objConversion = new Object_Conversion();
+
+        //for setting up pagination in display
+        Pagination objPaging = new Pagination();
 
         private ITelephoneDirectoryService objTelephone;
 
@@ -24,18 +35,73 @@ namespace Presentation_Layer.Controllers
             objTelephone = tmpService;
         }
 
-        public ActionResult Index(string search)
+        public ActionResult Index(string firstNameSearch,string lastNameSearch, string addressSearch, string phoneTypeSearch,string phoneNumberSearch)
+        {
+            if ((phoneTypeSearch == "Select one") &&(firstNameSearch==null))
+            {
+                phoneTypeSearch = null;
+            }       
+            else if((phoneTypeSearch == "Select one") && (firstNameSearch == string.Empty))
+            {
+                phoneTypeSearch = string.Empty;
+            }
+            else if(phoneTypeSearch == "Select one")
+            {
+                phoneTypeSearch = string.Empty;
+            }      
+            IEnumerable<TelephoneDirectoryRecordDTO> telephonerecordlist;
+            //calling method to search for phone number
+            telephonerecordlist = objTelephone.ViewSearchedRecords(firstNameSearch,lastNameSearch,addressSearch,phoneTypeSearch,phoneNumberSearch);
+
+            List<TelephoneDirectoryRecordModel> recordlist = new List<TelephoneDirectoryRecordModel>();
+
+            foreach (var obj in telephonerecordlist)
+            {
+                recordlist.Add(new TelephoneDirectoryRecordModel(obj.FirstName, obj.LastName, obj.Address, obj.PhoneType, obj.PhoneNumber));
+            }
+
+            //assingning the searched values to the static variables for accessing from post index action
+            _firstNameSearch = firstNameSearch;
+            _lastNameSearch = lastNameSearch;
+            _addressSearch = addressSearch;
+            _phoneTypeSearch = phoneTypeSearch;
+            _phoneNumberSearch = phoneNumberSearch;
+
+            ViewData["phonetype"] = string.Empty ;
+            //calling method to set pagination parameters
+            return View(objPaging.GetTelephoneDirectoryViewModel(1,recordlist));
+        }
+
+        [HttpPost]
+        public ActionResult Index(int currentPageIndex)
         {
             IEnumerable<TelephoneDirectoryRecordDTO> telephonerecordlist;
             //calling method to search for phone number
-            telephonerecordlist = objTelephone.ViewSearchedRecords(search);         
+            telephonerecordlist = objTelephone.ViewSearchedRecords(_firstNameSearch, _lastNameSearch, _addressSearch, _phoneTypeSearch, _phoneNumberSearch);
 
-            List<TelephoneDirectoryRecordViewModel> recordlist = new List<TelephoneDirectoryRecordViewModel>();
+            List<TelephoneDirectoryRecordModel> recordlist = new List<TelephoneDirectoryRecordModel>();
+
             foreach (var obj in telephonerecordlist)
             {
-                recordlist.Add(new TelephoneDirectoryRecordViewModel(obj.FirstName, obj.LastName, obj.Address, obj.PhoneType, obj.PhoneNumber));
+                recordlist.Add(new TelephoneDirectoryRecordModel(obj.FirstName, obj.LastName, obj.Address, obj.PhoneType, obj.PhoneNumber));
             }
-            return View(recordlist);
+
+            //setting searched values in viewdata for retrieving them in view
+            if(!string.IsNullOrEmpty(_firstNameSearch))
+                ViewData["firstname"] = _firstNameSearch;
+            if (!string.IsNullOrEmpty(_lastNameSearch))
+                ViewData["lastname"] = _lastNameSearch;
+            if (!string.IsNullOrEmpty(_addressSearch))
+                ViewData["address"] = _addressSearch;
+            if(_phoneTypeSearch!=null)
+                ViewData["phonetype"] = _phoneTypeSearch;
+            if (_phoneTypeSearch == null)
+                ViewData["phonetype"] = string.Empty;
+            if (!string.IsNullOrEmpty(_phoneNumberSearch))
+                ViewData["phonenumber"] = _phoneNumberSearch;
+
+            //calling method to set pagination parameters
+            return View(objPaging.GetTelephoneDirectoryViewModel(currentPageIndex, recordlist));
         }
 
         public ActionResult Create()
@@ -44,12 +110,12 @@ namespace Presentation_Layer.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(TelephoneDirectoryRecordViewModel objTelephoneViewModel)
+        public ActionResult Create(TelephoneDirectoryRecordModel objTelephoneViewModel)
         {
             if (ModelState.IsValid)
             {
                 //mapping view model object to dto type
-                TelephoneDirectoryRecordDTO objTelephoneDto = objConversion.ViewModelToDtoMapping(objTelephoneViewModel);
+                TelephoneDirectoryRecordDTO objTelephoneDto = objConversion.ModelToDtoMapping(objTelephoneViewModel);
                 //check for duplicate entry of phone number to ensure uniqueness
                 if (objTelephone.CheckDuplicate(objTelephoneDto.PhoneNumber,objTelephoneDto.PhoneType))
                 {
@@ -76,7 +142,7 @@ namespace Presentation_Layer.Controllers
             TelephoneDirectoryRecordDTO record = objTelephone.FindRecordDetails(phoneNumber);
 
             //mapping dto object to view model type
-            TelephoneDirectoryRecordViewModel objTelephoneRecordViewModel = objConversion.DtoToViewModelMapping(record);
+            TelephoneDirectoryRecordModel objTelephoneRecordViewModel = objConversion.DtoToModelMapping(record);
             if (record == null)
             {
                 return HttpNotFound();
@@ -85,11 +151,11 @@ namespace Presentation_Layer.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(TelephoneDirectoryRecordViewModel objTelephoneViewModel)
+        public ActionResult Edit(TelephoneDirectoryRecordModel objTelephoneViewModel)
         {
             if (ModelState.IsValid)
             {
-                TelephoneDirectoryRecordDTO objTelephoneDto = objConversion.ViewModelToDtoMapping(objTelephoneViewModel);
+                TelephoneDirectoryRecordDTO objTelephoneDto = objConversion.ModelToDtoMapping(objTelephoneViewModel);
                 //Checking for duplication only if phone number is changed
                 if (phoneNumberOld != objTelephoneDto.PhoneNumber)
                 {
@@ -116,7 +182,7 @@ namespace Presentation_Layer.Controllers
             TelephoneDirectoryRecordDTO record = objTelephone.FindRecordDetails(phoneNumber);
 
             //mapping dto object to view model type
-            TelephoneDirectoryRecordViewModel objTelephoneRecordViewModel = objConversion.DtoToViewModelMapping(record);
+            TelephoneDirectoryRecordModel objTelephoneRecordViewModel = objConversion.DtoToModelMapping(record);
             if (record == null)
             {
                 return HttpNotFound();
@@ -142,7 +208,7 @@ namespace Presentation_Layer.Controllers
             TelephoneDirectoryRecordDTO record = objTelephone.FindRecordDetails(phoneNumber);
             
             //mapping dto object to view model type
-            TelephoneDirectoryRecordViewModel objTelephoneRecordViewModel = objConversion.DtoToViewModelMapping(record);
+            TelephoneDirectoryRecordModel objTelephoneRecordViewModel = objConversion.DtoToModelMapping(record);
 
             if (record == null)
             {

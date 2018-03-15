@@ -16,12 +16,12 @@ namespace Data_Access_Layer.Repository
             this.context = context;
         }
 
-        public IEnumerable<TelephoneDirectoryRecord> ViewSearchedRecords(string search)
+        public IEnumerable<TelephoneDirectoryRecord> ViewSearchedRecords(string firstNameSearch, string lastNameSearch, string addressSearch, string phoneTypeSearch, string phoneNumberSearch)
         {
-            if(search!=null)
-                return context.Directory.Where(x => x.PhoneNumber.Contains(search)).ToList();
+            if(((firstNameSearch==null) || (firstNameSearch == string.Empty)) &&((lastNameSearch== null) || (lastNameSearch == string.Empty)) &&((addressSearch== null) || (addressSearch == string.Empty)) &&((phoneTypeSearch== null) || (phoneTypeSearch == string.Empty)) &&((phoneNumberSearch== null) || (phoneNumberSearch == string.Empty)))
+                return context.Directory.ToList();     
             else
-                return context.Directory.ToList();
+                return context.Directory.Where(x => x.FirstName.Contains(firstNameSearch) && x.LastName.Contains(lastNameSearch) && x.Address.Contains(addressSearch) && x.PhoneType.Contains(phoneTypeSearch) && x.PhoneNumber.Contains(phoneNumberSearch)).ToList();
         }
 
         public bool CheckDuplicate(string phoneNumber,string phoneType)
